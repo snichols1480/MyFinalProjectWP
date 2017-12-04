@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			</div>
 			
 			<div class="form-element">
-				<input type="submit" class="button" value = "Login" />&nbsp;
+				
 				<input type="submit" class="button" value = "Register" />&nbsp;
 				<input type="reset" class="button" /> &nbsp;
 			</div>

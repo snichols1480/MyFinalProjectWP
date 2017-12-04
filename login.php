@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<input type="password" name="password" placeholder="Password" />
 			<input type="submit" value="Log In" />
 		</form>
-		
+		<a href="index.php">HOME<br />
 	
 	</div>
 </body>

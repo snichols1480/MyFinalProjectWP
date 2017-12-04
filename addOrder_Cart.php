@@ -8,6 +8,8 @@ include('Myconfig.php');
 // Include functions for application
 include('functions.php');
 
+
+
 ?>
 
 
@@ -16,7 +18,7 @@ include('functions.php');
 <head>
 	<meta charset="utf-8">
 	
-  	<title>Login</title>
+  	<title>Your Order</title>
 	<meta name="description" content="The HTML5 Herald">
 	<meta name="author" content="SitePoint">
 
@@ -31,7 +33,31 @@ include('functions.php');
 	
 		<h1 style = color:blue;font-size:100px> Street Wingz  </h1> 
 				<img src = "Images/3a.jpg">
-				
+		<table>
+			<tr>
+				<td>
+					Order
+				</td>
+				<td>
+					Quantity
+				</td>
+			</tr>
+
+			
+			<tr>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+		
+		
+		<a href="index.php">HOME<br />
+		</table>
+
+		<br/>		
 				
 				
 	</div>

@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 	
 	elseif ($action == 'edit') {
-		// Update Customer
+		// Update Order
 		$sql = file_get_contents('sql/updateOrder.sql');
 		$params = array(
 			'fporderItemsMenu' => $wing-flavor,
@@ -106,10 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<input type="reset" class="button" />
 			</div>
 		</form>
-		<?php foreach ($orderItems as $orderItem) :?>
-		<p> Order Number <br /> </p>
-		<?php $orderItem('fporderItemsMenu'); ?>
-		<?php endforeach; ?>
+		
 	</div>
 </body>
 </html>
