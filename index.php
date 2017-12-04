@@ -1,10 +1,25 @@
 <?php
+include('menu.php');
 
 // Create and include a configuration file with the database connection
-//include('Myconfig.php');
+include('Myconfig.php');
 
 // Include functions for application
-include('menu.php');
+include('functions.php');
+
+// Call the newly defined get function to find to get the search term
+
+$term = get('search-term');
+
+$WingFlavors = searchWingFlavors($term, $database);
+
+//Include errors
+
+
+
+// Get a list of flavors from the database
+
+
 ?>
 
 
@@ -25,14 +40,31 @@ include('menu.php');
   	<![endif]-->
 </head>
 <body>
-		<p style = color:blue;font-size:400px;> Street Wingz  </p> 
-		<p
-			style = font-size:80px;>
-			<a href="addOrderForm.php">Order Now</a> <span>
-			style = align: right;
-			<a href="Customer.php">Customer</a> 
+		
+		
+			<h1 style = color:blue;font-size:100px> Street Wingz  </h1> 
+				<img src = "Images/3a.jpg">
+			<h2 style = color:blue > Hi, my name is Chelsey and "Street Wings" is my foodtruck. 
+			I am located in Lexington Kentucky.  I have several wing flavors.</h2>
+			
+		<form method="GET">
+			<input type="text" name="search-term" placeholder="Search Flavor..." />
+			<input type="submit" />
+		</form>
+		
+			<?php foreach ($WingFlavors as $WingFlavor) : ?>
+        <p> Flavor available: <?php echo $WingFlavor['flavor']; ?> <br />
 		</p>
-		 
+			<?php endforeach; ?>
+		<p>
+		
+			<a href="addOrderForm.php">Order Now</a> <br />
+			
+			<a href="Customer.php">New Customer<br /> 
+			<a href="login.php">Returning Customer<br />
+			
+		</p>
+				
 		
 
 </body>
